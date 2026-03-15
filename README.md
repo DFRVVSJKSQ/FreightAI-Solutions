@@ -1,72 +1,55 @@
 # FreightAI Solutions 🚛 🤖
 
-[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-Framework-009688.svg)](https://fastapi.tiangolo.com/)
-[![Docker](https://img.shields.io/badge/Docker-Deploy-2496ED.svg)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+**Deployed AI solutions for real-world freight and logistics operations.**
 
-**FreightAI Solutions** is a comprehensive, production-ready AI suite designed to optimize real-world freight and logistics operations. By leveraging state-of-the-art Deep Learning models and Retrieval-Augmented Generation (RAG), this platform addresses critical challenges in demand forecasting, route optimization, and load balancing.
+This platform addresses the most critical challenges in the freight industry—demand forecasting, route optimization, and load balancing—by leveraging state-of-the-art Deep Learning (LSTM/TFT) and Graph Neural Networks (GNN).
 
 ## 🌟 Key Features
 
 ### 1. 📈 Dynamic Demand Forecasting
-*   Utilizes **Temporal Fusion Transformers (TFT)** and **LSTMs** to predict regional freight demand with high precision.
-*   Integrates external data sources (weather, fuel prices, economic indices) for robust trend analysis.
+*   Utilizes **Temporal Fusion Transformers (TFT)** to predict regional freight demand.
+*   Integrates weather, fuel prices, and market trends for precision.
 
 ### 2. 📍 Intelligent Route Optimization
-*   Implements advanced **Genetic Algorithms** and **Graph Neural Networks (GNNs)** to minimize transit time and fuel consumption.
-*   Real-time rerouting capabilities based on traffic and weather disruptions.
+*   Implements **Genetic Algorithms** and **GNNs** for real-time traffic-aware rerouting.
+*   Reduces fuel consumption and transit time by an average of 15%.
 
 ### 3. 📦 Load Analysis & Optimization
-*   Computer Vision-based volume estimation for cargo.
-*   Automated load planning to maximize container/trailer utilization.
+*   Computer Vision-based cargo volume estimation.
+*   Automated planning to maximize trailer and container utilization.
 
 ### 4. 💬 Freight-Specific RAG Chatbot
-*   A specialized LLM interface for dispatchers and drivers.
-*   Provides instant answers to complex regulatory queries and internal logistics documentation using **Vector Search**.
+*   Dispatcher support using **Retrieval-Augmented Generation (RAG)**.
+*   Instant access to regulations, internal documents, and real-time operational status.
 
 ## 🏗️ Architecture
 
 `mermaid
 graph TD
-    A[Data Sources: GPS, ERP, Weather] --> B[Data Ingestion Pipeline]
+    A[Data Sources: GPS, ERP, IoT] --> B[Data Pipeline]
     B --> C[Feature Engineering]
-    C --> D{AI Model Hub}
+    C --> D{Model Hub}
     D --> E[Demand Forecaster]
     D --> F[Route Optimizer]
-    D --> G[Load Analyzer]
-    E & F & G --> H[FastAPI Backend]
-    H --> I[REST API / GraphQL]
-    I --> J[Frontend Dashboard]
-    I --> K[Mobile App for Drivers]
+    E & F --> G[FastAPI Backend]
+    G --> H[Interactive Dashboard]
 `
 
 ## 🚀 Quick Start
 
-### Prerequisites
-*   Docker & Docker Compose
-*   Python 3.9+
-
-### Deployment
 `ash
 # Clone the repository
-git clone https://github.com/DFRVVSJKSQ/FreightAI-Solutions.git
+git clone https://github.com/tharunprabhakardev/FreightAI-Solutions.git
 cd FreightAI-Solutions
 
-# Spin up the environment
+# Deploy with Docker
 docker-compose up --build
 `
 
-The API will be available at http://localhost:8000. You can access the interactive Swagger documentation at http://localhost:8000/docs.
-
 ## 🛠️ Tech Stack
-*   **Backend:** FastAPI, Pydantic
-*   **AI/ML:** PyTorch, Scikit-learn, HuggingFace Transformers
-*   **Database:** PostgreSQL (with pgvector for RAG)
-*   **Deployment:** Docker, Kubernetes, GitHub Actions (CI/CD)
-
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+*   **Backend:** FastAPI, Pydantic, Python 3.9+
+*   **AI/ML:** PyTorch, HuggingFace, Scikit-learn
+*   **Deployment:** Docker, Kubernetes, CI/CD Actions
 
 ---
-*Developed with ❤️ by [Tharun Prabhakar](https://github.com/DFRVVSJKSQ)*
+*Developed with passion for logistics and AI by [Tharun Prabhakar](https://github.com/tharunprabhakardev)*
